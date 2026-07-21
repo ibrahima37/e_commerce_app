@@ -22,3 +22,15 @@ spring:
           uri: lb://boutique-service
           predicates:
             - Path=/api/boutique/**
+        - id: commande-service
+          uri: lb://commande-service
+          predicates:
+            - Path=/api/commande/**
+        - id: paiement-service
+          uri: lb://paiement-service
+          predicates:
+            - Path=/api/paiement/**
+        - id: utilisateur-service
+          uri: lb://utilisateur-service
+          predicates:
+            - Path=/api/utilisateur/**
