@@ -3,15 +3,9 @@ spring:
     name: boutique-service
   config:
     import: optional:configserver:http://localhost:8888
-    
-  datasource:
-    url: jdbc:postgresql://localhost:5432/boutique
-    username: root
-    password: root
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+server:
+  port: 8081
+
 
   
 
