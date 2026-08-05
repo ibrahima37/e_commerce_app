@@ -18,19 +18,19 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: boutique-service
-          uri: lb://boutique-service
+        - id: BOUTIQUE-SERVICE
+          uri: lb://BOUTIQUE-SERVICE
           predicates:
             - Path=/api/boutique/**
-        - id: commande-service
-          uri: lb://commande-service
+        - id: COMMANDE-SERVICE
+          uri: lb://COMMANDE-SERVICE
           predicates:
             - Path=/api/commande/**
-        - id: paiement-service
-          uri: lb://paiement-service
+        - id: PAIEMENT-SERVICE
+          uri: lb://PAIEMENT-SERVICE
           predicates:
             - Path=/api/paiement/**
-        - id: utilisateur-service
-          uri: lb://utilisateur-service
+        - id: UTILISATEUR-SERVICE
+          uri: lb://UTILISATEUR-SERVICE
           predicates:
             - Path=/api/auth/**
