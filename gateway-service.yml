@@ -21,21 +21,21 @@ spring:
       discovery:
         locator:
           enabled: true
-          #lower-case-service-id: true
+          lower-case-service-id: true
       routes:
-        - id: BOUTIQUE-SERVICE
-          uri: lb://BOUTIQUE-SERVICE
+        - id: boutique-service
+          uri: lb://boutique-service
           predicates:
             - Path=/api/categories/**, /api/produits/**
-        - id: COMMANDE-SERVICE
-          uri: lb://COMMANDE-SERVICE
+        - id: commande-service
+          uri: lb://commande-service
           predicates:
             - Path=/api/commande/**, /api/panier/**
-        - id: PAIEMENT-SERVICE
-          uri: lb://PAIEMENT-SERVICE
+        - id: paiment-service
+          uri: lb://paiement-service
           predicates:
             - Path=/api/paiement/**, /api/facture/**
-        - id: UTILISATEUR-SERVICE
-          uri: lb://UTILISATEUR-SERVICE
+        - id: utilisateur-service
+          uri: lb://utilisateur-service
           predicates:
             - Path=/api/auth/**
