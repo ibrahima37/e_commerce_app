@@ -31,7 +31,7 @@ spring:
           uri: lb://commande-service
           predicates:
             - Path=/api/commande/**, /api/panier/**
-        - id: paiment-service
+        - id: paiement-service
           uri: lb://paiement-service
           predicates:
             - Path=/api/paiement/**, /api/facture/**
