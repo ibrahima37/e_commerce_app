@@ -26,15 +26,18 @@ spring:
         - id: boutique-service
           uri: lb://boutique-service
           predicates:
-            - Path=/api/categories/**, /api/produits/**
+            - Path=/api/categories/**
+            - Path=/api/produits/**
         - id: commande-service
           uri: lb://commande-service
           predicates:
-            - Path=/api/commande/**, /api/panier/**
+            - Path=/api/commande/**
+            - Path=/api/panier/**
         - id: paiement-service
           uri: lb://paiement-service
           predicates:
-            - Path=/api/paiement/**, /api/facture/**
+            - Path=/api/paiement/**
+            - Path=/api/facture/**
         - id: utilisateur-service
           uri: lb://utilisateur-service
           predicates:
