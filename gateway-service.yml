@@ -15,7 +15,6 @@ logging:
     org.springframework.web.cors: DEBUG
     org.springframework.cloud.gateway: DEBUG
 
-spring:
   cloud:
     gateway:
       discovery:
