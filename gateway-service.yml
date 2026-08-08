@@ -14,7 +14,7 @@ logging:
   level:
     org.springframework.web.cors: DEBUG
     org.springframework.cloud.gateway: DEBUG
-    
+
 spring:
   cloud:
     gateway:
@@ -23,23 +23,38 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: boutique-service
+        # Boutique Service
+        - id: boutique-categories
           uri: lb://boutique-service
           predicates:
             - Path=/api/categories/**
+        - id: boutique-produits
+          uri: lb://boutique-service
+          predicates:
             - Path=/api/produits/**
-        - id: commande-service
+
+        # Commande Service
+        - id: commande
           uri: lb://commande-service
           predicates:
             - Path=/api/commande/**
+        - id: panier
+          uri: lb://commande-service
+          predicates:
             - Path=/api/panier/**
-        - id: paiement-service
+
+        # Paiement Service
+        - id: paiement
           uri: lb://paiement-service
           predicates:
             - Path=/api/paiement/**
+        - id: facture
+          uri: lb://paiement-service
+          predicates:
             - Path=/api/facture/**
-        - id: utilisateur-service
+
+        # Utilisateur Service
+        - id: utilisateur-auth
           uri: lb://utilisateur-service
           predicates:
             - Path=/api/auth/**
-    
