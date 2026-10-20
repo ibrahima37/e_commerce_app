@@ -15,7 +15,7 @@ logging:
 # ---- Base de données (par défaut) ----
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/boutique
+    url: jdbc:postgresql://postgres:5432/boutique
     username: root
     password: root
     driver-class-name: org.postgresql.Driver
